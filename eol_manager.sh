@@ -82,6 +82,8 @@ function helpAndExit()
    mypr "The optional argument '--only' works as explained above. When not used, all text files of the specified EOL type will be converted. When used, all files (text or non-text) will have conversion attempted if they match the supplied suffixes."
    echo
    mypr "The optional '--show-skips' argument works as explained above; it only works when you don't use the '--only' argument, and will show the non-text files that did not have conversion attempted for them."
+   echo
+   mypr "Note: When not using the '--only' argument with \"--get [dir]\" and \"--change [dir]\", the Unix 'file' command will be used to tell which files in the directory are text and should have their EOL type determined. This heuristic is not guaranteed to work with 100% accuracy, so you may have to use '--only' to force EOL Manager to look at certain files."
    exit
 }
 
