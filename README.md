@@ -1,5 +1,5 @@
 # EOL Manager
-For those who have to deal with text files from different platforms, you no doubt have run into the issue of the three competing types of newlines: those used in DOS/Windows, in \*nix/macOS, and maybe even in the classic Mac OS. EOL Manager was written in order to survey the newline or end-of-line (EOL) types of groups of files, and then selectively change those EOL types. This script requires 'dos2unix' to run.
+For those who have to deal with text files from different platforms, you may have run into the three competing types of newlines: those used in DOS/Windows, in \*nix/macOS, and in the classic Mac OS. EOL Manager was written in order to survey the newline or end-of-line (EOL) types of groups of files, and then selectively change those EOL types. This script requires 'dos2unix' to run.
 
 The full documentation for the script can be seen by running it without any arguments. The script can be used on a single file, but here's the mass operations you can do with EOL Manager:
 - Print the EOL type for each file in a folder.
