@@ -11,6 +11,14 @@
 IFS="
 "
 
+## SAFETY ##
+which dos2unix > /dev/null
+if [ "$?" -ne 0 ]; then
+   echo "Error: 'dos2unix' does not appear to be installed, so the operation cannot be performed." | fmt -w 80
+   exit
+fi
+
+
 ## VARIABLES ##
 OPER_MODE=0
 MODE_GET=1
