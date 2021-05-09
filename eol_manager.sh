@@ -419,7 +419,7 @@ if [ $TARGET_TYPE -eq $TARGET_DIR ]; then # directory operation
          MIX_COUNT=0
          NONE_COUNT=0
          NUM_TYPES=0
-         for FILE in `find "$TARGET_ARG" -type f | grep "\.${SUFFIX}$"`; do
+         for FILE in `find -s "$TARGET_ARG" -type f | grep "\.${SUFFIX}$"`; do
             let TYPE_FOUND+=1
             if [ $OPER_MODE -eq $MODE_GET ]; then
                #MUTE_THIS=$(getEOLPrintAndTally "$FILE")
@@ -518,8 +518,8 @@ if [ $TARGET_TYPE -eq $TARGET_DIR ]; then # directory operation
       else
          echo "Considered a total of $GRAND_TOTAL $STR_FILES, and converted $CONVERT_TOTAL."
       fi
-   else # no-suffix mode
-      for FILE in `find "$TARGET_ARG" -type f`; do
+   else # no suffix filter
+      for FILE in `find -s "$TARGET_ARG" -type f`; do
          # Check with 'file' if this is text before proceeding; we don't do this if the user supplied
          # suffixes for us because we assume that he knows what he's doing
          RESULTS=$(file "$FILE" | grep ":.*text")
